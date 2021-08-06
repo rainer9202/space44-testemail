@@ -1,16 +1,13 @@
 import { Injectable } from "@nestjs/common";
-import { Email }      from "../../modules/index/interfaces/email";
 
 import { MailgunResolver }   from "./resolvers/mailgun.resolver";
 import { SparkPostResolver } from "./resolvers/sparkPost.resolver";
 
 @Injectable()
 export class EmailAdapter {
-  useMailGun( email: Email ) {
+  useMailGun( to, subject, content ) {
     return MailgunResolver.sendEmail(
-      email.to,
-      email.subject,
-      email.content
+      to, subject, content
     ).then( ( results ) => {
         return results;
       }
@@ -19,11 +16,9 @@ export class EmailAdapter {
     } );
   }
 
-  useSparkPost( email: Email ) {
+  useSparkPost( to, subject, content ) {
     return SparkPostResolver.sendEmail(
-      email.to,
-      email.subject,
-      email.content
+      to, subject, content
     ).then( ( { results } ) => {
         return results;
       }

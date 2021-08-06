@@ -13,17 +13,13 @@ export class IndexController {
   @Get( "/" )
   @Render( "index" )
   index( @Req() request ) {
-
     if ( !request.query.state ) {
       return { emails: this.indexServices.getEmails() };
     }
-
     if ( request.query.state === "Error" ) {
       return { emails: this.indexServices.getEmails(), error: true };
     }
-
     return { emails: this.indexServices.getEmails(), success: true };
-
   }
 
   @Post( "send-email" )
