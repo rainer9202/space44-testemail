@@ -12,6 +12,9 @@ Quasar: 2.0.3
 
 dist: Project compilation
 node_modules: Packages
+public: Static files served by nestjs
+views: Project views
+src: Logic files
 
 ## Installation
 
