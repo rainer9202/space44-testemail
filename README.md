@@ -4,17 +4,31 @@ The system is developed under the mvc paradigm using nestjs as the base framewor
 
 ## Technology
 
-Nestjs: 7.6.15
-Vue: 3
-Quasar: 2.0.3
+#Nestjs 
+7.6.15
+
+#Vue
+3
+
+#Quasar
+2.0.3
 
 ## Folders
 
-dist: Project compilation
-node_modules: Packages
-public: Static files served by nestjs
-views: Project views
-src: Logic files
+#dist
+Project compilation
+
+#node_modules
+Packages
+
+#public 
+Static files served by nestjs
+
+#views 
+Project views
+
+#src
+Logic files
 
 ## Installation
 
